@@ -1,0 +1,12 @@
+-- usuario en python para exp 3 prog. web
+CREATE USER  c##ausuario identified by 1234;
+GRANT CONNECT, RESOURCE TO c##usuario;
+ALTER USER c##usuario default tablespace users quota unlimited on users;
+
+-- fin bdd exp 3 prog. web 
+
+
+
+super usuario admin
+admin 
+1234
