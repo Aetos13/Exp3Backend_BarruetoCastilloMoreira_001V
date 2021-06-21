@@ -1,0 +1,190 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/cssgaleria.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="css/css.css" type="text/css" rel="stylesheet">
+    <title>Black Hole</title>
+</head>
+<body>
+  <style>
+    .banner-image{
+        background-image: url("{% static 'core/imagenes/fondo-nav.jpg'%}");
+        background-size: cover;
+    }
+</style>
+<!-- Navbar-->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark p-md-3">
+    <div class="container">
+        <a href="index.html" class="navbar-brand" >Black Hole</a>
+        <button type="button" class="navbar-toggler" data-target="#navbarNav" 
+        data-toggle="collapse" aria-controls="navbarNav" aria-lable="toggle Navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-white">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Galeria.html" class="nav-link text-white">Catálogo</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Banner Imagen -->
+<div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="content text-center">
+        <h1 class="text-white">Catálogo</h1>
+    </div>
+</div>
+    
+      <!--Galeria de fotos-->
+                     
+      
+      <div class="containerr">
+          
+        <div class="cardd desvanecer">
+          
+            <img src="imagenes/iphone.webp">
+            <h4>Iphone X 128GB Movistar</h4>
+            <p>$399.990</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+          
+              
+            </div>
+                 
+        <div class="cardd">
+            <img src="{% static 'core/imagenes/Playstation.jpg'%}">
+            <h4>Playstation 5 PRO 1TB </h4>
+            <p>$799.990</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>       
+        <div class="cardd">
+            <img src="{% static 'core/imagenes/gtx.jpg'%}">
+            <h4>MSI GTX 1650 4GB OC</h4>
+            <p>$330.990</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        <div class="cardd">
+            <img src="{% static 'core/imagenes/notebook.jpg'%}">
+            <h4>Asus TUF Gaming F15</h4>
+            <p>$850.000</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        <div class="cardd">
+            <img src="{% static 'core/imagenes/pendrive.webp'%}">
+            <h4>Pendrive Kingston 128gb</h4>
+            <p>19.200</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        <div class="cardd">
+            <img src="{% static 'core/imagenes/teclado.jpg'%}">
+            <h4>Reddragon kumara k552</h4>
+            <p>45.990</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+            <div class="cardd">
+                    <img src="{% static 'core/imagenes/tarjeta2.png'%}">
+                    <h4>Nvidia RTX 3080</h4>
+                    <p>1.199.990</p>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                    </div>
+        <div class="cardd">
+            <img src="{% static 'core/imagenes/mouse.jpg'%}">
+            <h4>Logitech G203</h4>
+            <p>19.990</p>
+            <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        <div class="cardd">
+                <img src="{% static 'core/imagenes/audifonos.jpg'%}">
+                <h4>Hyperx Cloud Stringer</h4>
+                <p>39.990</p>
+                <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+    </div>
+    
+    
+
+   <!-- Pie de Pagina -->
+   <footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum1">
+                <h1>Más información de<br> la compañia</h1>
+                <p>Esta compañia se dedica a la <br>venta de Equipos informaticos,<br>
+                partes y elemenos electronicos.
+                </p>
+            </div>
+
+            <div class="colum2">
+                <h1>Redes sociales</h1>
+                <div class="row3">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'core/imagenes/face.png'%}" ></a>
+                    <label> Síguenos en Facebook</label>
+                </div>
+                <div class="row3">
+                  <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'core/imagenes/insta.png'%}" ></a>
+                    <label> Síguenos en Instagram</label>
+                </div>
+                <div class="row3">
+                  <a href="https://twitter.com/?lang=es" target="_blank"><img src="{% static 'core/imagenes/twitter.png'%}"></a>
+                    <label> Síguenos en Twitter</label>
+                </div>
+            </div>
+
+            <div class="colum3">
+                <h1>Información de Contacto</h1>
+                <div class="row2">
+                    <img src="{% static 'core/imagenes/house.png'%}">
+                    <label>Teresa Vial 1137,<br> San Miguel</label>
+                </div>
+                <div class="row2">
+                    <img src="{% static 'core/imagenes/cellphone.png'%}">
+                    <label>+56 2 400<br> 200 6000</label>
+                </div>
+                <div class="row2">
+                    <img src="{% static 'core/imagenes/gmail.png'%}">
+                    <label>Experiencia1<br>@blackhole.cl</label>
+                </div>
+            </div>
+        </div> 
+
+        <div class="container-footer">
+            <div class="copyright">
+                Maickol Moreira, Alexis Barrueto y Andrés Castillo &#169 Derechos reservados a Black Hole 2021
+            </div>
+            <div class="terminos">
+                <a href="QuienesSomos.html">Información de la compañia </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/bootstrap.bundle.min.js"> </script>
+        <script type="text/javascript">
+            var nav = document.querySelector('nav');
+      
+            window.addEventListener('scroll', function () {
+              if (window.pageYOffset > 100) {
+                nav.classList.add('bg-dark', 'shadow');
+              } else {
+                nav.classList.remove('bg-dark', 'shadow');
+              }
+            });
+          </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+        
+</body>
+</html>
