@@ -1,0 +1,49 @@
+
+    
+ 
+
+
+
+ .error-control {
+    border: 1px solid red;
+}
+
+
+.container label.error {
+   color: red;
+   width: 300px;
+   font-size: 0.8em;
+   margin-top: -5px;
+   margin-bottom: 10px;
+}
+
+
+
+.asd{
+   float: left;
+   margin-right: 10px;
+  
+   
+
+}
+.container h6{
+   margin: 15px
+}
+
+#containerbh
+{
+   background-color:#f0f0f5;
+   border-radius: 20px;
+   padding: 20px
+   
+}
+
+#container-total
+{
+   padding: 50px;
+   background-color: #15151e;
+}
+
+
+
+
