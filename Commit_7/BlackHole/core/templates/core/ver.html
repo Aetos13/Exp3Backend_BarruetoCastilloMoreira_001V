@@ -1,0 +1,141 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   <link href="{% static 'core/css/css.css'%}" type="text/css" rel="stylesheet">
+    <title>Black Hole</title>
+
+</head>
+<body>  
+  <!-- Navbar-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark  shadow p-md-3">
+    <div class="container">
+        <a href="index" class="navbar-brand" >Black Hole</a>
+        <button type="button" class="navbar-toggler" data-target="#navbarNav" 
+        data-toggle="collapse" aria-controls="navbarNav" aria-lable="toggle Navbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="mx-auto"></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index" class="nav-link text-white">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="galeria" class="nav-link text-white">Catálogo</a>
+                </li>
+                <li class="nav-item">
+                  <a href="crear_objeto" class="nav-link text-white">Crear Pedido</a>
+              </li>
+              <li class="nav-item">
+                <a href="ver" class="nav-link text-white">Ver pedidos</a>
+            </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+  <br><br><br><br><br><br>
+<div class="container">
+    <certer><div class="row">
+            <h1>Mostrando Objetos</h1>
+        </div></certer>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Articulo</th>
+                    <th scope="col">Categoria</th>
+                    
+                    
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {%for ob in objetos%}
+                    <tr>
+                        <td>{{ob.id}}</td>
+                        <td>{{ob.marca}}</td>
+                        <td>{{ob.articulo}}</td>
+                        <td><a href="{% url 'modificar' ob.id%}" class="btn btn-primary">Modificar  </a></td>
+                        <td><a href="{% url 'eliminar' ob.id%}" class="btn btn-danger">Eliminar </a></td>
+                    </tr>
+                {%endfor%}
+
+            </tbody>
+       </table>
+       <a href="{% url 'crearObjeto' %}" class="btn btn-primary">Nuevo Objeto</a>
+
+       <br><br><br>
+    </div>
+  <!-- Pie de Pagina -->
+  <footer>
+    <div class="container-footer-all">
+        <div class="container-body">
+            <div class="colum1">
+                <h1>Más información de<br> la compañia</h1>
+                <p>Esta compañia se dedica a la <br>venta de Equipos informaticos,<br>
+                partes y elemenos electronicos.
+                </p>
+            </div>
+
+            <div class="colum2">
+                <h1>Redes sociales</h1>
+                <div class="row3">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="{% static 'core/imagenes/face.png'%}" ></a>
+                    <label> Síguenos en Facebook</label>
+                </div>
+                <div class="row3">
+                  <a href="https://www.instagram.com/" target="_blank"><img src="{% static 'core/imagenes/insta.png'%}" ></a>
+                    <label> Síguenos en Instagram</label>
+                </div>
+                <div class="row3">
+                  <a href="https://twitter.com/?lang=es" target="_blank"><img src="{% static 'core/imagenes/twitter.png'%}"></a>
+                    <label> Síguenos en Twitter</label>
+                </div>
+            </div>
+
+            <div class="colum3">
+                <h1>Información de Contacto</h1>
+                <div class="row2">
+                    <img src="{% static 'core/imagenes/house.png'%}">
+                    <label>Teresa Vial 1137,<br> San Miguel</label>
+                </div>
+                <div class="row2">
+                    <img src="{% static 'core/imagenes/cellphone.png'%}">
+                    <label>+56 2 400<br> 200 6000</label>
+                </div>
+                <div class="row2">
+                    <img src="{% static 'core/imagenes/gmail.png'%}">
+                    <label>Experiencia1<br>@blackhole.cl</label>
+                </div>
+            </div>
+        </div> 
+
+        <div class="container-footer">
+            <div class="copyright">
+                Maickol Moreira, Alexis Barrueto y Andrés Castillo &#169 Derechos reservados a Black Hole 2021
+            </div>
+            <div class="terminos">
+                <a href="QuienesSomos.html">Información de la compañia </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/bootstrap.bundle.min.js"> </script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
